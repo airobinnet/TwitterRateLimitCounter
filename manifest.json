@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Twitter Tweet Counter",
+    "version": "1.0",
+    "permissions": ["storage", "scripting", "alarms"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://twitter.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["graph.html", "libs/*", "images/*"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }

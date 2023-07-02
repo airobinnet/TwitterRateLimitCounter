@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daily Tweet Counter</title>
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body {
+        background-color: #1a1a1a;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 10px;
+        width: 320px;
+      }
+      #progressBar {
+        width: 100%;
+        background-color: #a1ceed;
+      }
+      #progressBar div {
+        height: 30px;
+        background-color: #1D9BF0;
+        width: 0%;
+      }
+      #reset {
+        background-color: #fff;
+        border: 0;
+        border-radius: 5px;
+        color: #1a1a1a;
+        cursor: pointer;
+        font-size: 1em;
+        padding: 10px;
+        transition: all 0.3s ease;
+      }
+      #reset:hover {
+        background-color: #1a1a1a;
+        color: #fff;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      #count {
+        font-size: 1em;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+      .modal {
+        color: #000;
+      }
+      .modal-header {
+        background-color: #1a1a1a;
+        color: #fff;
+      }
+      .modal-footer {
+        background-color: #1a1a1a;
+        color: #fff;
+      }
+      .modal-body {
+        background-color: #1a1a1a;
+        color: #fff;
+      }
+      .modal-content {
+        background-color: #1a1a1a;
+        color: #fff;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h1>Daily Tweet Counter</h1>
+    <img src="images/logo.png" alt="icon" width="75px" height="75px"/><br><br>
+    <div id="count">
+      <div></div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="settingsModalLabel">Settings</h5>
+            <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <button id="reset">Reset Counter</button><br><br>
+            <h>Rate Limit</h>
+            <select id="targetSelect" class="custom-select">
+              <option value="500">500</option>
+              <option value="1000">1000</option>
+              <option value="10000">10000</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div id="progressBar">
+      <div></div>
+    </div><br>
+    <a href="graph.html" target="_blank">View Daily Usage Graph</a><br><br>
+    <div class="cogwheel" id="cogwheel">
+      <span data-toggle="modal" data-target="#settingsModal"><i class="fa-solid fa-gear"></i></span>
+    </div>
+    <script src="libs/jquery-3.3.1.slim.min.js"></script>
+    <script src="libs/bootstrap.min.js"></script>
+  </body>
+</html>
