@@ -1,5 +1,11 @@
 # Twitter Tweet Counter
 
+
+
+https://github.com/airobinnet/TwitterRateLimitCounter/assets/126980386/f9141108-d627-47a9-ae7a-bc09220be991
+
+
+
 This is a Chrome extension that counts the number of tweets on the Twitter page. It uses MutationObserver to observe changes in the DOM and count the tweets. It also has a popup to reset the count and adjust the target count, and a graph to show the count over time.
 
 ## Installation
