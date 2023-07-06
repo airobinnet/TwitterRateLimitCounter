@@ -2,7 +2,7 @@
 
 
 
-https://github.com/airobinnet/TwitterRateLimitCounter/assets/126980386/f9141108-d627-47a9-ae7a-bc09220be991
+https://github.com/airobinnet/TwitterRateLimitCounter/assets/126980386/7bce2336-4a4d-4ea4-81f2-c56c2fd472ee
 
 
 
